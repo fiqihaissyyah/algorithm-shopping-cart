@@ -1,0 +1,23 @@
+PROGRAM ShoppingOnline
+
+STORE "product" with 0
+STORE "price" with 0
+STORE "totalPrice" with 0
+STORE "shopping" with TRUE
+STORE "add product" with TRUE
+
+WHILE "shopping" with TRUE
+	DO search product
+	IF "add product" equal TRUE
+		STORE "product" plus 1
+		STORE "totalPrice" with "price" times "product"
+	Else
+		STORE "product"
+		STORE "totalPrice" with "price" times "product"
+WHILE "shopping" with FALSE
+	DO go to checkout
+	IF "user" with TRUE
+		DO login
+	Else
+		DO registrasi
+PRINT proses pembayaran
